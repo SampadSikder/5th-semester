@@ -1,0 +1,15 @@
+h1 {
+    color: red;
+}
+
+.odd {
+    color: #ABCABC;
+}
+
+.even {
+    color: rgba(90, 90, 90, 0.5);
+}
+
+#cse101 {
+    color: red;
+}

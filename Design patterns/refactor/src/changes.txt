@@ -1,0 +1,12 @@
+For Fizzbuzz:
+1. Removed null string.
+2. Replaced inappropriate method name
+3. Removed duplicate code inside if statements.
+
+For PlaintextToHtmlConverter:
+1. Black sheep method read. So read file is given to another class.
+2. Comment smell. Unecessary comments are removed
+3. Long method name. stashandnextcharacter is removed as a method.
+4. Extract method. Basichtml encode is extracted to multiple methods.
+5. made 'sample.txt' a parameter.
+

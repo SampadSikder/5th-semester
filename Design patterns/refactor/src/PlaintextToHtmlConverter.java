@@ -8,13 +8,11 @@ import java.util.List;
 
 public class PlaintextToHtmlConverter {
     String source;
-    int i=0;
     List<String> result=new ArrayList<>();
     List<String> convertedLine=new ArrayList<>();
     String characterToConvert;
 
-    public String toHtml(String sourceFile) throws Exception {
-        readFile read=new readFile(sourceFile);
+    public String toHtml(readFile read) throws Exception {
         String htmlLines = basicHtmlEncode(read.returnText());
         return htmlLines;
     }
@@ -27,8 +25,10 @@ public class PlaintextToHtmlConverter {
         return finalResult;
     }
     private void convertLines(){
-        characterToConvert = String.valueOf(source.charAt(i++));
-        while (i <= this.source.length()) {
+        int index=0;
+        do {
+            characterToConvert = String.valueOf(source.charAt(index));
+            index++;
             switch (characterToConvert) {
                 case "<":
                     convertedLine.add("&lt;");
@@ -45,9 +45,7 @@ public class PlaintextToHtmlConverter {
                 default:
                     convertedLine.add(characterToConvert);
             }
-            if (i >= source.length()) break;
-            characterToConvert = String.valueOf(source.charAt(i++));
-        }
+        }while(index <= this.source.length());
     }
 
     private void addANewLine() {

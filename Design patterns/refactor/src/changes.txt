@@ -11,11 +11,11 @@ For PlaintextToHtmlConverter:
 
 For Trivia game:
 
-Inaprropriate naming roll method and parameter. Rename roll method to rollDice. Renamed parameter to dice.
-Extract method rollDice to method newLocation
-Inappropriate naming addPlayer, purses.
-Unnecessary method rockquestion, howManyPlayers are removed.
-Duplicate in method current category.
-wasCorrectlyAnswered() method was extracted to addPointsAndReturnWinner() method
-Long class, so made a new class Player
+1. Inaprropriate naming roll method and parameter. Rename roll method to rollDice. Renamed parameter to dice.
+2. Extract method rollDice to method newLocation
+3. Inappropriate naming addPlayer, purses.
+4. Unnecessary method rockquestion, howManyPlayers are removed.
+5. Duplicate in method current category.
+6. wasCorrectlyAnswered() method was extracted to addPointsAndReturnWinner() method
+7. Long class, so made a new class Player
 

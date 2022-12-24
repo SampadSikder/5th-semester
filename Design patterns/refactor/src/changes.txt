@@ -17,5 +17,4 @@ For Trivia game:
 4. Unnecessary method rockquestion, howManyPlayers are removed.
 5. Duplicate in method current category.
 6. wasCorrectlyAnswered() method was extracted to addPointsAndReturnWinner() method
-7. Long class, so made a new class Player
 

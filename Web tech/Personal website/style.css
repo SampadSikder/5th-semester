@@ -1,0 +1,75 @@
+body {
+    background-color: azure;
+    background-image: url('background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0px;
+}
+
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0px;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    background-color: #5161ce;
+    flex: 0.5;
+}
+
+.navbar li {
+    float: left;
+    padding: 5px;
+}
+
+.navbar li a {
+    border-radius: 80px;
+    border: 1px solid;
+    font-size: 30px;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    background-color: transparent;
+    color: honeydew;
+    text-decoration: none;
+    /*removes underline*/
+    /* color: rgba(255, 255, 255, 0.5); */
+}
+
+.navbar li a:hover {
+    background-color: blanchedalmond;
+    color: blue;
+}
+
+.navbar .contact {
+    position: relative;
+    float: right;
+    right: 20px;
+}
+
+.image {
+    position: relative;
+    justify-content: right;
+    float: right;
+    right: 20px;
+    top: 50px;
+}
+
+.image img {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 100%;
+    background-position: center;
+    right: 0px;
+    border: solid;
+}
+
+.portfolio {
+    border: solid;
+    margin-top: 100px;
+    margin-right: 100px;
+    margin-left: 20px;
+    float: left;
+}

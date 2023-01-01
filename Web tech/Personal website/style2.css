@@ -27,7 +27,9 @@ body {
     padding: 0px;
     overflow: hidden;
     width: 100%;
+    position: relative;
     background-color: #5161ce;
+    flex: 0.5;
 }
 
 .navbar li {
@@ -65,28 +67,40 @@ body {
     right: 20px;
 }
 
-.image {
-    position: relative;
-    float: right;
-    right: 20px;
-}
-
-.image img {
-    width: 350px;
-    height: 400px;
-    overflow: hidden;
-    background-position: center;
-    right: 0px;
-    border: solid;
-}
-
-.portfolio {
+.style-table {
+    display: flex;
+    justify-content: center;
     font: 'Muli', sans-serif;
     font-size: large;
-    margin-top: 100px;
-    margin-right: 500px;
-    margin-left: 20px;
-    padding-left: 50px;
+}
+
+.style-table th {
+    background-color: #5161ce;
+    color: #ffffff;
+}
+
+.style-table td,
+th {
+    padding: 12px 15px;
+}
+
+.style-table tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.style-table tr:nth-of-type(even) {
+    background-color: #e2e0e0;
+}
+
+
+.academics-image {
+    display: flex;
+    justify-content: center;
+}
+
+.academics-image img {
+    width: 300px;
+    height: 300px;
 }
 
 .footer {

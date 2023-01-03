@@ -1,11 +1,17 @@
-public class TonerSaveMode {
+public class TonerSaveMode implements IModes {
     int colorIntensity;
+    TonerSavingLevel tonerSavingLevel;
 
-    public void setColorIntensity(int colorIntensity){
+    public TonerSaveMode(int colorIntensity){
         this.colorIntensity=colorIntensity;
     }
-    public void saveToner(TonerSavingLevel tonerSavingLevel){
-        this.colorIntensity=tonerSavingLevel.algorithm(colorIntensity);
+
+    public void setMode(int colorIntensity, TonerSavingLevel tonerSavingLevel){
+        this.colorIntensity=colorIntensity;
+        this.tonerSavingLevel=tonerSavingLevel;
+    }
+    public void doMode(){
+        colorIntensity=tonerSavingLevel.algorithm(colorIntensity);
     }
 
 }

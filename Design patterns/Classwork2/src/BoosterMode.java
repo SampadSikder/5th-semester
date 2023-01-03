@@ -1,10 +1,12 @@
-public class BoosterMode {
+public class BoosterMode implements IModes{
     int intensityThreshold;
+    int colorIntensity;
 
-    public void setIntensityThreshold(int intensityThreshold){
+    public BoosterMode(int colorIntensity,int intensityThreshold){
         this.intensityThreshold=intensityThreshold;
+        this.colorIntensity=colorIntensity;
     }
-    public int boost(int colorIntensity){
-        return colorIntensity*intensityThreshold;
+    public void doMode(){
+        colorIntensity= colorIntensity*intensityThreshold;
     }
 }

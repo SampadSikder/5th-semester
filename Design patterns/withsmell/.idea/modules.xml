@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/FactoryMethod.iml" filepath="$PROJECT_DIR$/FactoryMethod.iml" />
+      <module fileurl="file://$PROJECT_DIR$/withsmell.iml" filepath="$PROJECT_DIR$/withsmell.iml" />
     </modules>
   </component>
 </project>

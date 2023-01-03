@@ -1,17 +1,19 @@
-public class PageSaveMode {
+public class PageSaveMode implements IModes{
     int pageSize;
     int orientation;
-
-    public void setPageSize(int pageSize){
+    public PageSaveMode(int pageSize,int orientation){
         this.pageSize=pageSize;
-    }
-    public void setOrientation(int orientation){
         this.orientation=orientation;
     }
+
     public void algorithm(){
         //do something to pageSize and orientation
     }
     public void renderPreview(){
 
+    }
+    public void doMode(){
+        algorithm();
+        renderPreview();
     }
 }

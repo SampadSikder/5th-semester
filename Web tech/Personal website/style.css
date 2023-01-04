@@ -9,6 +9,8 @@ body {
 
 .container {
     animation: transitionIn 1s;
+    width: 100%;
+    overflow: scroll;
 }
 
 @keyframes transitionIn {
@@ -25,7 +27,7 @@ body {
     list-style-type: none;
     margin: 0;
     padding: 0px;
-    overflow: hidden;
+    overflow: auto;
     width: 100%;
     background-color: #5161ce;
 }
@@ -43,7 +45,7 @@ body {
 .navbar li a {
     border-radius: 80px;
     border: 1px solid;
-    font-size: 15px;
+    font-size: 20px;
     text-align: center;
     padding: 10px;
     display: flex;
@@ -67,39 +69,39 @@ body {
 
 .image {
     position: relative;
-    float: right;
-    right: 20px;
+    float: left;
+    padding-left: 200px;
+    width: 25%;
+    padding-top: 70px;
+
 }
 
 .image img {
     width: 350px;
     height: 400px;
     background-position: center;
-    right: 0px;
-    border: solid;
+    border: 1px solid;
 }
 
 .portfolio {
+    width: 50%;
+    padding-left: 100px;
+    float: left;
+
+}
+
+.portfolio .text {
     font: 'Muli', sans-serif;
     font-size: large;
-    width: 65%;
+    text-align: center;
+
 }
 
 .list {
-    width: 50%;
+    text-align: justify;
     border-left: 0px;
 }
 
-.image2 {
-    float: left;
-    border-right: 0px;
-    width: 10%;
-}
-
-.image2 img {
-    width: 250px;
-    height: 250px;
-}
 
 .footer {
     position: fixed;

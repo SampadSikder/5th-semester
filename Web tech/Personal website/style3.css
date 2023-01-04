@@ -67,41 +67,18 @@ body {
     right: 20px;
 }
 
-.style-table {
-    display: flex;
-    justify-content: center;
-    font: 'Muli', sans-serif;
+.container .achievements {
+    padding-left: 100px;
+    padding-top: 2px;
+    width: 35%;
     font-size: large;
+    float: left;
 }
 
-.style-table th {
-    background-color: #5161ce;
-    color: #ffffff;
+.container .achievement-img {
+    float: left;
 }
 
-.style-table td,
-th {
-    padding: 12px 15px;
-}
-
-.style-table tr {
-    border-bottom: 1px solid #dddddd;
-}
-
-.style-table tr:nth-of-type(even) {
-    background-color: #e2e0e0;
-}
-
-
-.academics-image {
-    display: flex;
-    justify-content: center;
-}
-
-.academics-image img {
-    width: 300px;
-    height: 300px;
-}
 
 .footer {
     position: fixed;

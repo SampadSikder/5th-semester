@@ -5,10 +5,14 @@ body {
     background-image: url('background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+
 }
 
-.container {
+.mainpage {
     animation: transitionIn 1s;
+    width: 100%;
+    font-family: 'Brush Script MT', cursive;
+    font-size: 20px;
 }
 
 @keyframes transitionIn {
@@ -52,6 +56,7 @@ body {
     background-color: transparent;
     color: honeydew;
     text-decoration: none;
+    font-family: 'Muli', sans-serif;
     /*removes underline*/
     /* color: rgba(255, 255, 255, 0.5); */
 }
@@ -67,18 +72,28 @@ body {
     right: 20px;
 }
 
-.container .achievements {
+.mainpage .achievements {
+    width: 33%;
+    font-size: 25px;
+    float: left;
     padding-left: 100px;
-    padding-top: 2px;
-    width: 35%;
-    font-size: large;
-    float: left;
 }
 
-.container .achievement-img {
+.mainpage .achievement-img {
     float: left;
+    width: 60%;
+    height: 700px;
+
 }
 
+
+
+.carousel {
+    width: 550px;
+    height: 420px;
+    margin-left: 50%;
+    margin-right: auto;
+}
 
 .footer {
     position: fixed;

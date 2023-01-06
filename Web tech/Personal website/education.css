@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+body {
+    background-color: azure;
+    background-image: url('background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+}
+
+.container {
+    animation: transitionIn 1s;
+}
+
+@keyframes transitionIn {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0px;
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    background-color: #5161ce;
+    flex: 0.5;
+}
+
+.navbar li {
+    float: left;
+    padding: 5px;
+}
+
+.navbar li a.active {
+    background-color: blanchedalmond;
+    color: blue;
+}
+
+.navbar li a {
+    border-radius: 80px;
+    border: 1px solid;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    background-color: transparent;
+    color: honeydew;
+    text-decoration: none;
+    font-family: 'Muli', sans-serif;
+    /*removes underline*/
+    /* color: rgba(255, 255, 255, 0.5); */
+}
+
+.navbar li a:hover {
+    background-color: blanchedalmond;
+    color: blue;
+}
+
+.navbar .contact {
+    position: relative;
+    float: right;
+    right: 20px;
+}
+
+.style-table {
+    display: flex;
+    justify-content: center;
+    font: 'Muli', sans-serif;
+    font-size: large;
+}
+
+.style-table th {
+    background-color: #5161ce;
+    color: #ffffff;
+}
+
+.style-table td,
+th {
+    padding: 12px 15px;
+}
+
+.style-table tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.style-table tr:nth-of-type(even) {
+    background-color: #e2e0e0;
+}
+
+
+.academics-image {
+    display: flex;
+    justify-content: center;
+}
+
+.academics-image img {
+    width: 300px;
+    height: 300px;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #5161ce;
+    color: white;
+    text-align: center;
+    font-size: small;
+}

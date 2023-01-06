@@ -1,24 +1,17 @@
-@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
-
 body {
     background-color: azure;
     background-image: url('background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    margin: 0;
 }
 
 .container {
-    animation: transitionIn 1s;
-}
-
-@keyframes transitionIn {
-    from {
-        opacity: 0
-    }
-
-    to {
-        opacity: 1
-    }
+    padding-left: 50px;
+    width: 100%;
+    font-family: 'Brush Script MT', cursive;
+    font-size: 20px;
+    text-align: center;
 }
 
 .navbar ul {
@@ -52,6 +45,7 @@ body {
     background-color: transparent;
     color: honeydew;
     text-decoration: none;
+    font-family: 'Muli', sans-serif;
     /*removes underline*/
     /* color: rgba(255, 255, 255, 0.5); */
 }
@@ -67,40 +61,30 @@ body {
     right: 20px;
 }
 
-.style-table {
-    display: flex;
-    justify-content: center;
-    font: 'Muli', sans-serif;
-    font-size: large;
+.container h1 {
+    width: 20%;
 }
 
-.style-table th {
-    background-color: #5161ce;
-    color: #ffffff;
+.container ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0px;
 }
 
-.style-table td,
-th {
-    padding: 12px 15px;
+.container ul li {
+    margin: 50px;
 }
 
-.style-table tr {
-    border-bottom: 1px solid #dddddd;
-}
-
-.style-table tr:nth-of-type(even) {
-    background-color: #e2e0e0;
-}
-
-
-.academics-image {
-    display: flex;
-    justify-content: center;
-}
-
-.academics-image img {
-    width: 300px;
-    height: 300px;
+.container ul a {
+    border-radius: 80px;
+    border: 1px solid;
+    font-size: 30px;
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(119, 105, 241);
+    color: white;
+    text-decoration: none;
+    font-family: 'Muli', sans-serif;
 }
 
 .footer {

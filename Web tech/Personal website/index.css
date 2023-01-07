@@ -13,8 +13,8 @@ body {
     width: 100%;
     overflow: scroll;
     font-family: 'Brush Script MT', cursive;
-    font-size: 24px;
-    line-height: 80%;
+    font-size: 30px;
+    line-height: 120%;
 }
 
 @keyframes transitionIn {

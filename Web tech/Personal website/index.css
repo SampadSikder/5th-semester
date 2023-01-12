@@ -5,12 +5,16 @@ body {
     background-image: url('background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    margin: 0;
 }
 
 .container {
     animation: transitionIn 1s;
     width: 100%;
     overflow: scroll;
+    font-family: 'Brush Script MT', cursive;
+    font-size: 30px;
+    line-height: 120%;
 }
 
 @keyframes transitionIn {
@@ -22,6 +26,7 @@ body {
         opacity: 1
     }
 }
+
 
 .navbar ul {
     list-style-type: none;
@@ -52,6 +57,7 @@ body {
     background-color: transparent;
     color: honeydew;
     text-decoration: none;
+    font-family: 'Muli', sans-serif;
     /*removes underline*/
     /* color: rgba(255, 255, 255, 0.5); */
 }
@@ -72,7 +78,7 @@ body {
     float: left;
     padding-left: 200px;
     width: 25%;
-    padding-top: 70px;
+    padding-top: 30px;
 
 }
 
@@ -84,22 +90,20 @@ body {
 }
 
 .portfolio {
+    padding-top: 30px;
     width: 50%;
     padding-left: 100px;
     float: left;
-
 }
 
 .portfolio .text {
-    font: 'Muli', sans-serif;
-    font-size: large;
     text-align: center;
-
 }
 
-.list {
+.portfolio .list {
     text-align: justify;
     border-left: 0px;
+    list-style-type: none;
 }
 
 

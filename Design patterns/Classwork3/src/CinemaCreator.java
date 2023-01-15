@@ -1,6 +1,17 @@
 public class CinemaCreator {
-    public void createCinema(){
-        Cinema funny=new Comedy("fun");
+    public Cinema createCinema(String cinemaType){
+        if(cinemaType=="Comedy"){
+            return new Comedy();
+        }
+        else if(cinemaType=="Animation"){
+            return new Animation();
+        }
+        else if(cinemaType=="Tragedy"){
+            return new Tragedy();
+        }
+        else{
+            return null;
+        }
 
     }
 }

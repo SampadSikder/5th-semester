@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container">
+        <p id="p1">Hello1</p>
+        <p id="p2">Hello2</p>
+        <ul>
+            <li>Html</li>
+            <li>CSS</li>
+            <li>Javascript</li>
+        </ul>
+    </div>
+    <div class="anotherdiv"></div>
+    <script>
+        // let myDiv = document.getElementsByTagName("p");
+        // console.log(myDiv);
+
+        // for (let i = 0; i < myDiv.length; i++) {
+        //     console.log(myDiv[i]);
+        // }
+        let myDiv = document.getElementById("container");
+
+        console.log(myDiv.parentElement);
+        console.log(myDiv.children);
+        console.log(myDiv.childNodes);
+        console.log(myDiv.firstElementChild);
+        console.log(myDiv.lastElementChild);
+    </script>
+</body>
+
+</html>

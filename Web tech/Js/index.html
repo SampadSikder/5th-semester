@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="index.js"></script>
+    <title>Welcome to Javascript</title>
+</head>
+
+<body>
+    <!-- <p id="p1">Programming</p>
+    <button onclick="document.getElementById('p1').innerHTML='Webtech'">Change text</button>
+    <button onclick="document.getElementById('p1').innerHTML='Programming'">Undo</button> -->
+    <!-- <p id="p1">70</p>
+        
+    <script>
+        var marks = parseInt(document.getElementById('p1').innerHTML);
+        console.log(marks);
+
+        if (marks >= 80) {
+            document.write("A+");
+        }
+        else if (marks >= 75 && marks < 80) {
+            document.write("A");
+        }
+        else if (marks >= 70 && marks < 75) {
+            document.write("A-");
+        }
+        else if (marks >= 65 && marks < 70) {
+            document.write("B+");
+        }
+        else if (marks >= 60 && marks < 65) {
+            document.write("B");
+        } -->
+
+
+    <!-- </script> -->
+    <p id="email">mou@iit.du.ac.bd</p>
+    <p id="pass">12345</p>
+    <script>
+        const mail = "mo@iit.du.ac.bd";
+        const pass = "12345";
+
+        var in1 = document.getElementById('email').innerHTML;
+        var in2 = document.getElementById('pass').innerHTML;
+
+        for (let i = 0; ; i++) {
+            if (in1 == mail && in2 == pass) {
+                console.log("Homepage");
+                break;
+            }
+            else {
+                console.log(i + 1);
+                if (i + 1 == 5) {
+                    console.log("You have been blocked");
+                    break;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

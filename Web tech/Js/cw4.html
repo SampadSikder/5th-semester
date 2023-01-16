@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        .myPara {
+            border: 1px solid;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <p>This is para1</p>
+        <p id="p2">This is para2</p>
+        <p class="myPara" id="p3">This is para3</p>
+        <ul>
+            <li>list 1</li>
+            <li>list 2</li>
+        </ul>
+    </div>
+
+    <script>
+        let para = document.createElement("p");
+        para.innerText = "This is para 4";
+        document.body.appendChild(para);
+
+        // let para2 = document.getElementById("p2");
+        // para2.remove();
+        let myDiv = document.getElementById("container");
+        myDiv.removeChild(myDiv.firstElementChild);
+
+        let para1 = document.createElement("p");
+        para1.innerText = "This is para 1";
+
+        myDiv.insertBefore(para1, myDiv.firstElementChild);
+
+        let para2 = document.getElementById("p3");
+        let className = para2.getAttribute("class");
+        let p2 = document.getElementById("p2");
+        p2.setAttribute("class", className);
+    </script>
+</body>
+
+</html>

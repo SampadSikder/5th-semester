@@ -33,6 +33,14 @@
         console.log(myDiv.childNodes);
         console.log(myDiv.firstElementChild);
         console.log(myDiv.lastElementChild);
+
+        let myDv = document.getElementsByTagName('div');
+        console.log(myDv[0].parentElement);
+        console.log(myDv[0].firstElementChild);
+        console.log(myDv[0].children[2]);
+        for (let i = 0; i < myDv[0].children[2].children.length; i++) {
+            console.log(myDv[0].children[2].children[i]);
+        }
     </script>
 </body>
 

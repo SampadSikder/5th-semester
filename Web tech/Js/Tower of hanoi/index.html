@@ -5,6 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
     <title>Hanoi</title>
     <style>
         .container {
@@ -12,30 +23,22 @@
             height: 100%;
         }
 
-        .box1 {
-            width: 20%;
-            float: left;
+        .flex-container {
             border: 1px solid;
+            width: 300px;
+            height: 180px;
+            float: left;
+
         }
 
-        .box2 {
-            width: 20%;
-            float: left;
-            border: 1px solid;
+        .btn {
+            width: 100%;
+            border: 0px !important;
         }
 
-        .box3 {
-            width: 20%;
-            float: left;
+        p {
             border: 1px solid;
-        }
-
-        #two,
-        #four,
-        #three,
-        #one {
-            border: 1px solid;
-            border-radius: 8px;
+            border-radius: 80px;
             text-align: center;
         }
     </style>
@@ -43,24 +46,41 @@
 
 <body>
     <div class="container">
-        <div class="box1">
-            <p id="two">2</p>
-            <p id="four">4</p>
-            <p id="three">3</p>
-            <p id="one">1</p>
-            <button>1->2</button>
-            <button>4->2</button>
+        <div class="flex-container box1">
+            <p class="p1">1</p>
+            <p class="p2">2</p>
+            <p class="p3">3</p>
+            <p class="p4">4</p>
         </div>
-        <div class="box2">
+
+        <div class="flex-container box2">
 
         </div>
-        <div class="box3">
 
+        <div class="flex-container box3">
         </div>
+        <div class="flex-container btn">
+            <button onClick="func(1,2)">1->2</button>
+            <button onClick="func(1,3)">1->3</button>
+            <button onClick="func(2,1)">2->1</button>
+            <button onClick="func(2,3)">2->3</button>
+            <button onClick="func(3,1)">3->1</button>
+            <button onClick="func(3,2)">3->2</button>
+            <button onClick="check()">Check</button>
+        </div>
+
     </div>
-    <style>
+    <script>
+        function func(x, y) {
+            var para = document.getElementsByClassName("box" + x).item(0).lastElementChild;
+            var adder = document.getElementsByClassName("box" + y).item(0);
 
-    </style>
+            console.log(para);
+            para.remove();
+            adder.append(para);
+        }
+    </script>
+
 </body>
 
 </html>

@@ -1,17 +1,19 @@
-public class CinemaCreator {
-    public Cinema createCinema(String cinemaType){
-        if(cinemaType=="Comedy"){
-            return new Comedy();
-        }
-        else if(cinemaType=="Animation"){
-            return new Animation();
-        }
-        else if(cinemaType=="Tragedy"){
-            return new Tragedy();
-        }
-        else{
-            return null;
-        }
+interface CinemaCreator {
+    public Cinema createCinema();
 
+}
+class CreateComedy implements CinemaCreator{
+    public Cinema createCinema(){
+        return new Comedy();
+    }
+}
+class CreateAnimation implements CinemaCreator{
+    public Cinema createCinema(){
+        return new Animation();
+    }
+}
+class CreateTragedy implements CinemaCreator{
+    public Cinema createCinema(){
+        return new Tragedy();
     }
 }

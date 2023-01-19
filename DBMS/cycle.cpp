@@ -27,8 +27,9 @@ void DFS_Visit(int graph[][N], int u)
         if (graph[u][v] == 1 && color[v] == BLACK)
         {
         }
+        0
 
-        if (graph[u][v] == 1 && color[v] == WHITE)
+            if (graph[u][v] == 1 && color[v] == WHITE)
         {
             prevv[v] = u;
             DFS_Visit(graph, v);

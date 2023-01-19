@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class ESRB{
     private static ESRB instance = null;
-    ArrayList<Cinema>database=new ArrayList<>();
+    private ArrayList<Cinema>database=new ArrayList<>();
     private ESRB(){
 
     }

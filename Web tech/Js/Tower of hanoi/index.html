@@ -21,6 +21,12 @@
         .container {
             width: 100%;
             height: 100%;
+            text-align: center;
+        }
+
+        .boxes {
+            display: flex;
+            align-items: center;
         }
 
         .flex-container {
@@ -28,56 +34,161 @@
             width: 300px;
             height: 180px;
             float: left;
-
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
         }
 
         .btn {
             width: 100%;
+            padding-top: 100px;
             border: 0px !important;
+        }
+
+        .btn button {
+            background-color: rgb(241, 121, 127);
+            color: white;
+            width: 100px;
         }
 
         p {
             border: 1px solid;
             border-radius: 80px;
-            text-align: center;
+            background-color: azure;
         }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <div class="flex-container box1">
-            <p class="p1">1</p>
-            <p class="p2">2</p>
-            <p class="p3">3</p>
-            <p class="p4">4</p>
+        <h1>Welcome to Tower of hanoi!</h1>
+        <div class="boxes">
+            <div class="flex-container box1">
+                <p id="p1">1</p>
+                <p id="p2">2</p>
+                <p id="p3">3</p>
+                <p id="p4">4</p>
+            </div>
+
+            <div class="flex-container box2">
+            </div>
+
+            <div class="flex-container box3">
+            </div>
         </div>
 
-        <div class="flex-container box2">
-
-        </div>
-
-        <div class="flex-container box3">
-        </div>
-        <div class="flex-container btn">
-            <button onClick="func(1,2)">1->2</button>
-            <button onClick="func(1,3)">1->3</button>
-            <button onClick="func(2,1)">2->1</button>
-            <button onClick="func(2,3)">2->3</button>
-            <button onClick="func(3,1)">3->1</button>
-            <button onClick="func(3,2)">3->2</button>
+        <div class="btn">
+            <button onClick="move(1,2)">1->2</button>
+            <button onClick="move(1,3)">1->3</button>
+            <button onClick="move(2,1)">2->1</button>
+            <button onClick="move(2,3)">2->3</button>
+            <button onClick="move(3,1)">3->1</button>
+            <button onClick="move(3,2)">3->2</button>
             <button onClick="check()">Check</button>
+            <button onClick="reset()">Reset</button>
+        </div>
+
+        <div class="result">
+
         </div>
 
     </div>
     <script>
-        function func(x, y) {
-            var para = document.getElementsByClassName("box" + x).item(0).lastElementChild;
-            var adder = document.getElementsByClassName("box" + y).item(0);
+        function move(from, to) {
+            let bx1 = document.getElementsByClassName("box" + from);
+            let para = bx1[0].firstElementChild;
+            if (para != null) {
+                para.remove();
 
-            console.log(para);
-            para.remove();
-            adder.append(para);
+                let bx2 = document.getElementsByClassName("box" + to);
+                bx2[0].appendChild(para);
+            }
+            else {
+                alert("Cannot move empty field");
+            }
+
+
+        }
+        function check() {
+            let allPresent = false;
+            var bx = document.getElementsByClassName("flex-container");
+            if (bx[0].childElementCount == 4 || bx[1].childElementCount == 4 || bx[2].childElementCount == 4) {
+                isAllPresent = true;
+            }
+            let isSorted = true;
+            var para = document.getElementsByTagName("p");
+            for (var i = 0; i < para.length - 1; i++) {
+                if (para[i].innerHTML < para[i + 1].innerHTML) {
+                    isSorted = false;
+                    break;
+                }
+            }
+            let div = document.getElementsByClassName("result");
+            while (div[0].firstElementChild) {
+                div[0].firstElementChild.remove();
+            }
+            if (isSorted == true && isAllPresent == true) {
+
+                let winner = document.createElement("h1");
+                winner.innerHTML = "You win!!!!!!";
+                div[0].appendChild(winner);
+
+            }
+
+            else {
+                let loser = document.createElement("h1");
+                loser.innerHTML = "You lose :(";
+                div[0].appendChild(loser);
+            }
+        }
+
+        function reset() {
+            let bx = document.getElementsByClassName("flex-container");
+
+            console.log(bx);
+            //remove all
+            for (let i = 0; i < bx.length; i++) {
+                console.log(bx[i]);
+                console.log(bx[i].firstElementChild);
+
+                while (bx[i].firstElementChild) {
+                    if (bx[i].firstElementChild)
+                        bx[i].firstElementChild.remove();
+                }
+            }
+
+            //create an array and randomize
+            let a = [];
+            for (i = 0; i < 4; i++) a[i] = i + 1;
+            shuffle(a);
+
+            console.log(a);
+
+            //add random array to fist box
+            let bx1 = document.getElementsByClassName("box1");
+
+            for (i = 0; i < 4; i++) {
+                let para = document.createElement("p");
+                para.id = "p" + (i + 1);
+                console.log(para.id);
+                para.innerHTML = a[i];
+                bx1[0].appendChild(para);
+            }
+
+        }
+
+        function shuffle(a) {
+            let currentIndex = a.length;
+
+            while (currentIndex != 0) {
+
+                randomIndex = Math.floor(Math.random() * currentIndex);
+                currentIndex--;
+
+                // And swap it with the current element.
+                [a[currentIndex], a[randomIndex]] = [
+                    a[randomIndex], a[currentIndex]];
+            }
         }
     </script>
 

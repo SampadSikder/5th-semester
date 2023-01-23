@@ -37,15 +37,23 @@
             margin-left: auto;
             margin-right: auto;
             text-align: center;
+            padding-top: 5px;
         }
 
-        .btn {
+        .btn1 {
             width: 100%;
             padding-top: 100px;
             border: 0px !important;
         }
 
-        .btn button {
+        .btn2 {
+            width: 100%;
+            padding-top: 100px;
+            border: 0px !important;
+        }
+
+        .btn1 button,
+        .btn2 button {
             background-color: rgb(241, 121, 127);
             color: white;
             width: 100px;
@@ -64,9 +72,9 @@
         <h1>Welcome to Tower of hanoi!</h1>
         <div class="boxes">
             <div class="flex-container box1">
-                <p id="p1">1</p>
-                <p id="p2">2</p>
-                <p id="p3">3</p>
+                <p id="p1">3</p>
+                <p id="p2">1</p>
+                <p id="p3">2</p>
                 <p id="p4">4</p>
             </div>
 
@@ -77,23 +85,40 @@
             </div>
         </div>
 
-        <div class="btn">
+        <div class="btn1">
             <button onClick="move(1,2)">1->2</button>
             <button onClick="move(1,3)">1->3</button>
             <button onClick="move(2,1)">2->1</button>
             <button onClick="move(2,3)">2->3</button>
             <button onClick="move(3,1)">3->1</button>
             <button onClick="move(3,2)">3->2</button>
+
+        </div>
+        <div class="btn2">
             <button onClick="check()">Check</button>
             <button onClick="reset()">Reset</button>
         </div>
-
         <div class="result">
 
         </div>
 
     </div>
     <script>
+
+        function addPadding(bx) {
+            if (bx[0].childElementCount == 3) {
+                bx[0].style.paddingTop = "65px";
+            }
+            else if (bx[0].childElementCount == 2) {
+                bx[0].style.paddingTop = "90px";
+            }
+            else if (bx[0].childElementCount == 1) {
+                bx[0].style.paddingTop = "120px";
+            }
+            else {
+                bx[0].style.paddingTop = "5px";
+            }
+        }
         function move(from, to) {
             let bx1 = document.getElementsByClassName("box" + from);
             let para = bx1[0].firstElementChild;
@@ -102,11 +127,18 @@
 
                 let bx2 = document.getElementsByClassName("box" + to);
                 bx2[0].appendChild(para);
+
+                for (let i = 0; i < bx2[0].childElementCount; i++) {
+                    temp = bx2[0].children[i].innerHTML;
+                    bx2[0].children[i].innerHTML = bx2[0].lastElementChild.innerHTML;
+                    bx2[0].lastElementChild.innerHTML = temp;
+                }
+                addPadding(bx1);
+                addPadding(bx2);
             }
             else {
                 alert("Cannot move empty field");
             }
-
 
         }
         function check() {
@@ -173,6 +205,11 @@
                 console.log(para.id);
                 para.innerHTML = a[i];
                 bx1[0].appendChild(para);
+            }
+            bx1[0].style.paddingTop = "5px";
+            let div = document.getElementsByClassName("result");
+            while (div[0].firstElementChild) {
+                div[0].firstElementChild.remove();
             }
 
         }

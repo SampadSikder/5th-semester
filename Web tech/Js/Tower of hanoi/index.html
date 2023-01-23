@@ -38,6 +38,8 @@
             margin-right: auto;
             text-align: center;
             padding-top: 5px;
+            display: flex;
+            flex-direction: column-reverse;
         }
 
         .btn {
@@ -149,30 +151,13 @@
 
     </div>
     <script>
-
-        function addPadding(bx) {
-            if (bx[0].childElementCount == 3) {
-                bx[0].style.paddingTop = "65px";
-            }
-            else if (bx[0].childElementCount == 2) {
-                bx[0].style.paddingTop = "90px";
-            }
-            else if (bx[0].childElementCount == 1) {
-                bx[0].style.paddingTop = "120px";
-            }
-            else {
-                bx[0].style.paddingTop = "5px";
-            }
-        }
         function move(from, to) {
             let bx1 = document.getElementsByClassName("box" + from);
-            let para = bx1[0].firstElementChild;
+            let para = bx1[0].lastElementChild;
             if (para != null) {
                 para.remove();
                 let bx2 = document.getElementsByClassName("box" + to);
-                bx2[0].insertBefore(para, bx2[0].firstElementChild);
-                addPadding(bx1);
-                addPadding(bx2);
+                bx2[0].append(para);
             }
             else {
                 alert("Cannot move empty field");
@@ -188,7 +173,7 @@
             let isSorted = true;
             var para = document.getElementsByTagName("p");
             for (var i = 0; i < para.length - 1; i++) {
-                if (para[i].innerHTML > para[i + 1].innerHTML) {
+                if (para[i].innerHTML < para[i + 1].innerHTML) {
                     isSorted = false;
                     break;
                 }

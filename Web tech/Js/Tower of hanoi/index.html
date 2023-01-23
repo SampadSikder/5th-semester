@@ -80,6 +80,34 @@
             border-radius: 80px;
             background-color: azure;
         }
+
+        #p1 {
+            width: 100px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        #p2 {
+            width: 150px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        #p3 {
+            width: 200px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        #p4 {
+            width: 250px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
     </style>
 </head>
 
@@ -88,10 +116,10 @@
         <h1>Welcome to Tower of hanoi!</h1>
         <div class="boxes">
             <div class="flex-container box1">
-                <p id="p1">3</p>
-                <p id="p2">1</p>
-                <p id="p3">2</p>
+                <p id="p1">1</p>
+                <p id="p2">2</p>
                 <p id="p4">4</p>
+                <p id="p3">3</p>
             </div>
 
             <div class="flex-container box2">
@@ -141,15 +169,8 @@
             let para = bx1[0].firstElementChild;
             if (para != null) {
                 para.remove();
-
                 let bx2 = document.getElementsByClassName("box" + to);
-                bx2[0].appendChild(para);
-
-                for (let i = 0; i < bx2[0].childElementCount; i++) {
-                    temp = bx2[0].children[i].innerHTML;
-                    bx2[0].children[i].innerHTML = bx2[0].lastElementChild.innerHTML;
-                    bx2[0].lastElementChild.innerHTML = temp;
-                }
+                bx2[0].insertBefore(para, bx2[0].firstElementChild);
                 addPadding(bx1);
                 addPadding(bx2);
             }
@@ -167,7 +188,7 @@
             let isSorted = true;
             var para = document.getElementsByTagName("p");
             for (var i = 0; i < para.length - 1; i++) {
-                if (para[i].innerHTML < para[i + 1].innerHTML) {
+                if (para[i].innerHTML > para[i + 1].innerHTML) {
                     isSorted = false;
                     break;
                 }
@@ -218,12 +239,14 @@
 
             for (i = 0; i < 4; i++) {
                 let para = document.createElement("p");
-                para.id = "p" + (i + 1);
+                para.id = "p" + a[i];
                 console.log(para.id);
                 para.innerHTML = a[i];
                 bx1[0].appendChild(para);
             }
+
             bx1[0].style.paddingTop = "5px";
+
             let div = document.getElementsByClassName("result");
             while (div[0].firstElementChild) {
                 div[0].firstElementChild.remove();

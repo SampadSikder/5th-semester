@@ -3,8 +3,8 @@ import java.nio.file.*;
 import java.util.Date;
 
 public class ConcreteSubject extends Subject{
-    private String fileName;
-    private String path;
+    protected String fileName;
+    protected String path;
 
     public ConcreteSubject(String fileName, String path){
         this.fileName=fileName;
@@ -14,7 +14,7 @@ public class ConcreteSubject extends Subject{
         WatchService watchService= FileSystems.getDefault().newWatchService();
         Path dirPath= Paths.get(path);
         System.out.println(dirPath);
-        dirPath.register(watchService, StandardWatchEventKinds.ENTRY_MODIFY);
+        dirPath.register(watchService, this.registerEvent());
 
         while(true){
             WatchKey key=watchService.take();
@@ -38,4 +38,31 @@ public class ConcreteSubject extends Subject{
             }
         }
     }
+    public WatchEvent.Kind<Path> registerEvent() throws IOException{
+        System.out.println("modify");
+        return StandardWatchEventKinds.ENTRY_MODIFY;
+    }
 }
+
+class SubjectAdd extends ConcreteSubject{
+    public SubjectAdd(String fileName, String path){
+        super(fileName,path);
+    }
+    @Override
+    public WatchEvent.Kind<Path> registerEvent() throws IOException{
+        System.out.println("add");
+        return StandardWatchEventKinds.ENTRY_CREATE;
+    }
+}
+
+class SubjectDelete extends ConcreteSubject{
+    public SubjectDelete(String fileName, String path){
+        super(fileName,path);
+    }
+    @Override
+    public WatchEvent.Kind<Path> registerEvent() throws IOException{
+        System.out.println("delete");
+        return StandardWatchEventKinds.ENTRY_DELETE;
+    }
+}
+

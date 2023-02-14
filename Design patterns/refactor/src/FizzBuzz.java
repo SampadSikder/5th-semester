@@ -14,7 +14,8 @@ public class FizzBuzz {
         if(number % 5==0){
             fizzedWord+="Buzz";
         }
-        else{
+
+        if(fizzedWord.compareTo("")==0){
             fizzedWord=String.valueOf(number);
         }
         return fizzedWord;

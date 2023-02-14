@@ -14,16 +14,15 @@ public class Employee {
     }
 }
 
-class EmployeeBuilder{
+abstract class EmployeeBuilder{
 
     private String employeeName;
     private String employeeID;
     private Double KPI;
 
-    public EmployeeBuilder setEmployeeID(String employeeID){
-        this.employeeID=employeeID;
-        return this;
-    }
+    public EmployeeBuilder setEmployeeID(String employeeID);
+   
+
     public EmployeeBuilder setEmployeeName(String employeeName){
         this.employeeName=employeeName;
         return this;
@@ -35,5 +34,14 @@ class EmployeeBuilder{
 
     public Employee Build(){
         return new Employee(this.employeeName,this.employeeID,this.KPI);
+    }
+}
+
+class EmployeeIDBuilder extends EmployeeBuilder{
+    private String employeeId;
+
+    public EmployeeBuilder setEmployeeID(String employeeID){
+        this.employeeID=employeeID;
+        return this;
     }
 }

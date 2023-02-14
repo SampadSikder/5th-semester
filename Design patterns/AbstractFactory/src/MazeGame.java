@@ -15,11 +15,6 @@ public class MazeGame {
         return aMaze;
     }
 
-
-
-
-
-
 }
 abstract class MazeFactory{
 
@@ -37,7 +32,6 @@ abstract class MazeFactory{
         }
          return instance;
     }
-
     //factory methods
     public abstract Room CreateRoom(int roomNo);
 

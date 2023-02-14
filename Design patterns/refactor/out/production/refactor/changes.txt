@@ -1,0 +1,23 @@
+For Fizzbuzz:
+1. Replaced inappropriate method name
+2. Removed duplicate code inside if statements. Multiple if statements with same logic.
+
+For PlaintextToHtmlConverter:
+1. Black sheep method read. So read file is given to another class.
+2. Introduced parameter object to get rid of inline class and shorten method.
+3. Extract method. Basichtml encode is extracted to multiple methods as it is long method.
+4. Duplicated code inside convertLines method. do while loop is introduced and stashnextcharacter is removed as a method.
+5. Comment smell. Unnecessary comments are removed.
+
+For Trivia game:
+
+1. Inaprropriate naming roll method and parameter. Rename roll method to rollDice. Renamed parameter to dice.
+2. Extract method rollDice to method changeLocationAndAskQuestion.
+3. Inappropriate naming addPlayer, purses.
+4. Unnecessary method rockquestion, howManyPlayers are removed.
+5. Duplicate in method current category.
+6. wasCorrectlyAnswered() method was extracted to addPointsAndReturnWinner() method
+7. Trivia game is a long class. So it was made into three seperate class, questions, player and trivia game.
+8. Removed primitive types.
+9. Made new function nextPlayerTurn to iterate players and reset iterator.
+

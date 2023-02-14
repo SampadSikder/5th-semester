@@ -9,16 +9,20 @@
 </head>
 
 <body>
-    <div id="container">
+    <div id="container1">
         <p id="p1">Hello1</p>
         <p id="p2">Hello2</p>
         <ul>
-            <li>Html</li>
+            <li style="color:blue">Html</li>
             <li>CSS</li>
             <li>Javascript</li>
         </ul>
     </div>
-    <div class="anotherdiv"></div>
+    <div class="container 2">
+        <p>Hello there</p>
+    </div>
+
+    <div class="container 3"></div>
     <script>
         // let myDiv = document.getElementsByTagName("p");
         // console.log(myDiv);
@@ -26,20 +30,52 @@
         // for (let i = 0; i < myDiv.length; i++) {
         //     console.log(myDiv[i]);
         // }
-        let myDiv = document.getElementById("container");
+        // let myDiv = document.getElementById("container");
 
-        console.log(myDiv.parentElement);
-        console.log(myDiv.children);
-        console.log(myDiv.childNodes);
-        console.log(myDiv.firstElementChild);
-        console.log(myDiv.lastElementChild);
+        // console.log(myDiv.parentElement);
+        // console.log(myDiv.children);
+        // console.log(myDiv.childNodes);
+        // console.log(myDiv.firstElementChild);
+        // console.log(myDiv.lastElementChild);
 
-        let myDv = document.getElementsByTagName('div');
-        console.log(myDv[0].parentElement);
-        console.log(myDv[0].firstElementChild);
-        console.log(myDv[0].children[2]);
-        for (let i = 0; i < myDv[0].children[2].children.length; i++) {
-            console.log(myDv[0].children[2].children[i]);
+        // let myDv = document.getElementsByTagName('div');
+        // console.log(myDv[0].parentElement);
+        // console.log(myDv[0].firstElementChild);
+        // console.log(myDv[0].children[2]);
+        // for (let i = 0; i < myDv[0].children[2].children.length; i++) {
+        //     console.log(myDv[0].children[2].children[i]);
+        // }
+
+        let para1 = document.getElementById("container1");
+        console.log(para1.firstElementChild);
+        console.log(para1.parentElement);
+        console.log(para1.childElementCount);
+        console.log(para1.lastElementChild);
+
+        for (let i = 0; i < para1.childElementCount; i++) {
+            console.log(para1.children[i]);
+        }
+
+        let myDiv = document.getElementsByClassName("container");
+        console.log(myDiv);
+
+        console.log(myDiv[0].firstElementChild);
+        myDiv[0].firstElementChild.style.color = "blue";
+        myDiv[0].firstElementChild.innerHTML = "Hello";
+        console.log(myDiv[0].firstElementChild.innerHTML);
+        myDiv[0].append(para1.innerText);
+
+        console.log(para1.children[2].children[2]);
+
+        const add = document.createElement("p");
+        add.setAttribute("onclick", "fun()");
+        add.innerHTML = "Click Me";
+        add.style.backgroundColor = "red";
+        add.style.color = "white";
+        myDiv[0].appendChild(add);
+
+        function fun() {
+            alert("nc");
         }
     </script>
 </body>

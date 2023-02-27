@@ -1,9 +1,9 @@
 public class Main {
     public static void main(String[] args) {
 
-        ConcreteSubject subject=new ConcreteSubject("observe.txt", ".");
-        SubjectAdd subjectAdd=new SubjectAdd("observe.txt", ".");
-        SubjectDelete subjectDelete=new SubjectDelete("observe.txt", ".");
+        ConcreteSubject subject=new SubjectModify("observe.txt", ".");
+        ConcreteSubject subjectAdd=new SubjectAdd("observe.txt", ".");
+        ConcreteSubject subjectDelete=new SubjectDelete("observe.txt", ".");
 
         ConcreteObserver observer1=new ConcreteObserver("1");
         ConcreteObserver observer2=new ConcreteObserver("2");

@@ -2,7 +2,7 @@ import java.io.IOException;
 import java.nio.file.*;
 import java.util.Date;
 
-public abstract class ConcreteSubject extends Subject{
+public class ConcreteSubject extends Subject{
     protected String fileName;
     protected String path;
     protected String state;
@@ -40,41 +40,11 @@ public abstract class ConcreteSubject extends Subject{
         }
     }
 
-    public abstract WatchEvent.Kind<Path> registerEvent() throws IOException;
-
-
-}
-class SubjectModify extends ConcreteSubject{
-    public SubjectModify(String fileName, String path){
-        super(fileName,path);
-    }
-    @Override
     public WatchEvent.Kind<Path> registerEvent() throws IOException{
         System.out.println("modify");
         return StandardWatchEventKinds.ENTRY_MODIFY;
     }
 
-}
 
-class SubjectAdd extends ConcreteSubject{
-    public SubjectAdd(String fileName, String path){
-        super(fileName,path);
-    }
-    @Override
-    public WatchEvent.Kind<Path> registerEvent() throws IOException{
-        System.out.println("add");
-        return StandardWatchEventKinds.ENTRY_CREATE;
-    }
-}
 
-class SubjectDelete extends ConcreteSubject{
-    public SubjectDelete(String fileName, String path){
-        super(fileName,path);
-    }
-    @Override
-    public WatchEvent.Kind<Path> registerEvent() throws IOException{
-        System.out.println("delete");
-        return StandardWatchEventKinds.ENTRY_DELETE;
-    }
 }
-

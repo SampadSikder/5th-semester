@@ -35,4 +35,7 @@ export class ItemService {
   setItems(items: Item[]): void {
     this.items = items;
   }
+  getItem(index: number): Item {
+    return this.items[index];
+  }
 }

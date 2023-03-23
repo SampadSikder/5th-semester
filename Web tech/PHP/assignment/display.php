@@ -19,42 +19,51 @@
 </head>
 
 <body>
-    <?php foreach ($_POST as $val) {
-        if (empty($val))
-            echo "<script>alert('You have not filled up all the inputs')</script>";
-    }
-    ?>
-    <?php
-    $photoName = $_FILES['photo']['name'];
-    ?>
 
+    <!DOCTYPE HTML>
+    <html>
 
-    Name:
-    <?php
-    echo $_POST["fName"] . " " . $_POST["lName"];
-    ?><br>
+    <head>
+    </head>
 
-
-    <div class="upldimg">
-        <?php
-        $im = "<img src=$photoName width=\"300px;\" style=\"border-radius: 200px\">";
-        echo $im;
+    <body>
+        <?php foreach ($_POST as $val) {
+            if (empty($val))
+                echo "<script>alert('You have not filled up all the inputs')</script>";
+        }
         ?>
-    </div>
+        <?php
+        $photoName = $_FILES['photo']['name'];
 
-    Email:
-    <?php
-    echo $_POST["email"];
-    ?><br>
-
-    Address:
-    <?php
-    echo $_POST["addr"];
-    ?><br>
+        ?>
 
 
+        Name:
+        <?php
+        echo $_POST["fName"] . " " . $_POST["lName"];
+        ?><br>
+
+
+        <div class="upldimg">
+            <?php
+            $im = "<img src=$photoName width=\"300px;\" style=\"border-radius: 200px\">";
+            echo $im;
+            ?>
+        </div>
+
+        Email:
+        <?php
+        echo $_POST["email"];
+        ?><br>
+
+        Address:
+        <?php
+        echo $_POST["addr"];
+        ?><br>
 
 
 
 
-</html>
+
+
+    </html>

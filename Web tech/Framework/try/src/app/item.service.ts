@@ -8,6 +8,8 @@ export class ItemService {
 
   constructor() { }
 
+  itemToBeUpdated: Item = new Item();
+
   items: Item[] = [
     {
       id: 1,
@@ -37,5 +39,14 @@ export class ItemService {
   }
   getItem(index: number): Item {
     return this.items[index];
+  }
+  setItemToBeUpdated(index: number): void {
+    let item = this.items.at(index);
+    if (item != null) {
+      this.itemToBeUpdated = item;
+    }
+  }
+  getItemToBeUpdated(): Item {
+    return this.itemToBeUpdated;
   }
 }

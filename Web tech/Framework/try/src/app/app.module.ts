@@ -7,6 +7,7 @@ import { ItemListComponent } from './item-list/item-list.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponentComponent } from './home-component/home-component.component';
 import { UpdateComponent } from './update/update.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { UpdateComponent } from './update/update.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

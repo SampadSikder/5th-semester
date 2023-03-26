@@ -36,6 +36,7 @@ export class ItemListComponent implements OnInit {
   }
 
   updateItem(index: number): void {
+    this.itemService.setItemToBeUpdated(index);
     this.router.navigate(["update"]);
   }
 

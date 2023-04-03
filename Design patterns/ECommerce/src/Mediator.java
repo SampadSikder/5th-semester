@@ -30,6 +30,7 @@ class ConcreteMediator implements Mediator{
 
     public void addToCart(Product product){
         cart.add(product);
+        product.decreaseInventory();
     }
     public void emptyCart(){
         cart.clear();

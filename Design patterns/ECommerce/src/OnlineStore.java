@@ -10,30 +10,7 @@ public abstract class OnlineStore {
     }
 
     public final void purchase() {
-
-        String name;
-        String password;
-        String email;
-        String address;
-
-        Scanner scanner=new Scanner(System.in);
-
-        System.out.println("Enter name: ");
-        name=scanner.nextLine();
-
-        System.out.println("Enter email: ");
-        email=scanner.nextLine();
-
-        System.out.println("Enter password: ");
-        password=scanner.nextLine();
-
-        System.out.println("Enter address: ");
-        address=scanner.nextLine();
-
-        User user = new User(name,email,password,address);
-
-        Login(user);
-        displayProduct();
+        Login();
 
 
         Integer index=0;
@@ -44,8 +21,8 @@ public abstract class OnlineStore {
 
 
         while(true) {
-            System.out.print("Enter a number or type 'checkout' to exit: ");
-            checkout = scanner.nextLine();
+            displayProduct();
+            checkout = userInput("Enter a number or type 'checkout' to exit: ");
 
             if(checkout.equalsIgnoreCase("checkout")) {
                 break;
@@ -61,7 +38,7 @@ public abstract class OnlineStore {
 
         System.out.println("1. Credit Card/t 2. Paypal 3. Cryptocurrency");
 
-        index=scanner.nextInt();
+        index=Integer.parseInt(userInput("Select strategy")) ;
         PaymentStrategy paymentStrategy=null;
 
         if(index==1){
@@ -82,7 +59,7 @@ public abstract class OnlineStore {
 
     protected abstract void displayProduct();
 
-    protected abstract void Login(User user);
+    protected abstract void Login();
     protected abstract void addProductToCart(Integer index);
 
     protected abstract void processPayment(PaymentStrategy paymentMethod);
@@ -90,9 +67,18 @@ public abstract class OnlineStore {
     protected void sendConfirmationEmail(Product product, User user) {
         System.out.println("Sending confirmation email to " + user.getEmail() + " for " + product.getName());
     }
+
+    public String userInput(String prompt){
+        Scanner scanner=new Scanner(System.in);
+        System.out.println(prompt);
+        return scanner.nextLine();
+    }
+
 }
 
 class ConcreteOnlineStore extends OnlineStore {
+
+
     public ConcreteOnlineStore(Mediator mediator){
         super(mediator);
     }
@@ -101,30 +87,56 @@ class ConcreteOnlineStore extends OnlineStore {
     public void displayProduct() {
         Integer i=1;
         for(Product product: mediator.getProductList()){
-            System.out.println(i+".Displaying product: " + product.getName() + " - " + product.getDescription() + " - $" + product.getPrice());
+            System.out.println(i+".Displaying product: " + product.getName() + " - " + product.getDescription() + " - $" + product.getPrice() +" Stock:"+ product.getInventory());
             i++;
         }
     }
 
-    public void Login(User user){
+    public void Login(){
+
+        String name;
+        String password;
+
+
+
+        name=userInput("name");
+
+        password=userInput("password");
+
 
         if(mediator.getUserList().isEmpty()) {
-            System.out.println("Creating user account " + user.getName());
-            mediator.addUser(user);
+           addNewUser(name, password);
         } else {
             boolean userFound = false;
             for(User checkUser : mediator.getUserList()) {
-                if(user.getName().equals(checkUser.getName()) && user.getPassword().equals(checkUser.getPassword())) {
-                    System.out.println("User logged in: " + user.getName());
+                if(checkUser.getName().equals(name) && checkUser.getPassword().equals(password)) {
+                    System.out.println("User logged in: " + checkUser.getName());
                     userFound = true;
                     break;
                 }
             }
             if(!userFound) {
-                System.out.println("Creating user account " + user.getName());
-                mediator.addUser(user);
+                System.out.println("Creating user account " );
+                addNewUser(name, password);
             }
         }
+
+    }
+
+    public void addNewUser(String name, String password){
+        System.out.println("Creating user account ");
+
+        String email=userInput("email");
+        String address=userInput("address");
+
+        mediator.addUser(new User(name, email,password, address));
+    }
+
+    @Override
+    public String userInput(String prompt){
+        Scanner scanner=new Scanner(System.in);
+        System.out.println("Enter " + prompt);
+        return scanner.nextLine();
     }
 
     public void addProductToCart(Integer index){

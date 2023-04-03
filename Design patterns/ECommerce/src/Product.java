@@ -24,7 +24,7 @@ public class Product {
     public Integer getInventory(){
         return this.inventory;
     }
-    public void setInventory(Integer inventory){
-        this.inventory=inventory;
+    public void decreaseInventory(){
+        this.inventory--;
     }
 }

@@ -7,12 +7,11 @@ public class Main {
     public static void main(String[] args) {
 
         Retailer retailer=new Retailer();
-
+        System.out.println("Welcome!");
+        OnlineStore onlineStore=new ConcreteOnlineStore(retailer.getMediator());
 
 
         while(true){
-            System.out.println("Login: ");
-            OnlineStore onlineStore=new ConcreteOnlineStore(retailer.getMediator());
             onlineStore.purchase();
         }
 

@@ -24,12 +24,17 @@ class Line extends Shape{
 }
 class Rect extends Shape{
     private ArrayList<Shape> lines=new ArrayList<>();
-    public Rect(ArrayList<Shape> lines){
-        this.lines=lines;
-        this.checkShape();
+    private int length;
+    private int breadth;
+    public Rect(int length, int breadth){
+        this.length=length;
+        this.breadth=breadth;
     }
     public void Draw(){
-        System.out.println("Abjrect");
+        lines.add(new Line(this.length));
+        lines.add(new Line(this.length));
+        lines.add(new Line(this.breadth));
+        lines.add(new Line(this.breadth));
     }
     public int getShape(){
         return 0;
@@ -48,8 +53,10 @@ class Rect extends Shape{
 }
 class Square extends Shape{
     private ArrayList<Shape> lines=new ArrayList<>();
-    public Square(ArrayList<Shape> lines){
-        this.lines=lines;
+    private int length;
+    public Square(int length){
+
+        this.length=length;
     }
    public void checkShape(){
         int length=lines.get(0).getShape();

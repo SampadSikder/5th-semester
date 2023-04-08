@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
 
 
-        Shape shape=new Line(4);
+        /*Shape shape=new Line(4);
         Shape shape1=new Line(4);
         Shape shape2=new Line(4);
         Shape shape3=new Line(4);
@@ -17,7 +17,7 @@ public class Main {
         line.add(shape3);
 
         Shape square= new Square(line);
-        Shape rect=new Rect(line);
+        Shape rect=new Rect(line);*/
 
     }
 }

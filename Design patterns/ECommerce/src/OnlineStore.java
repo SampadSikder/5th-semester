@@ -36,7 +36,7 @@ public abstract class OnlineStore {
         }
         System.out.println("Enter payment method: ");
 
-        System.out.println("1. Credit Card/t 2. Paypal 3. Cryptocurrency");
+        System.out.println("1. Credit Card 2. Paypal 3. Cryptocurrency");
 
         index=Integer.parseInt(userInput("Select strategy")) ;
         PaymentStrategy paymentStrategy=null;
@@ -55,6 +55,7 @@ public abstract class OnlineStore {
         processPayment(paymentStrategy);
 
         System.out.println("Thank you for using the system!");
+
     }
 
     protected abstract void displayProduct();
@@ -64,9 +65,6 @@ public abstract class OnlineStore {
 
     protected abstract void processPayment(PaymentStrategy paymentMethod);
 
-    protected void sendConfirmationEmail(Product product, User user) {
-        System.out.println("Sending confirmation email to " + user.getEmail() + " for " + product.getName());
-    }
 
     public String userInput(String prompt){
         Scanner scanner=new Scanner(System.in);
@@ -157,8 +155,8 @@ class ConcreteOnlineStore extends OnlineStore {
             return;
         }
         mediator.setPaymentMethod(paymentMethod);
-        System.out.println("Product bought with price: " + mediator.processOrder());
-        paymentMethod.processPayment(mediator.processOrder());
+        System.out.println("Product bought with price: " );
+        mediator.processOrder();
         mediator.emptyCart();
     }
 }

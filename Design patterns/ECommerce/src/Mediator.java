@@ -6,7 +6,7 @@ public interface Mediator {
     public void addToCart(Product product);
     public void emptyCart();
     public void addUser(User user);
-    public Double processOrder();
+    public void processOrder();
     public List<Product> getProductList();
     public List<User> getUserList();
     public List<Product> getCart();
@@ -36,15 +36,17 @@ class ConcreteMediator implements Mediator{
         cart.clear();
     }
     public void setPaymentMethod(PaymentStrategy paymentMethod){
+
         this.paymentStrategy=paymentMethod;
     }
 
-    public Double processOrder(){
+    public void processOrder(){
         Double price=0.0;
         for(Product product:cart){
             price+=product.getPrice();
         }
-        return price;
+        System.out.println(price);
+        this.paymentStrategy.processPayment(price);
     }
     public List<Product> getProductList(){
         return products;

@@ -40,7 +40,7 @@ class Addon implements Beverage{
     }
 }
 
-class MilkAddon implements Beverage{
+class MilkAddon extends Addon{
     private ArrayList<Beverage> addons=new ArrayList<>();
 
     public void addon(Beverage beverage){
@@ -51,7 +51,7 @@ class MilkAddon implements Beverage{
         return 5.00;
     }
 }
-class SugarAddon implements Beverage{
+class SugarAddon extends Addon{
     private ArrayList<Beverage> addons=new ArrayList<>();
 
     public void addon(Beverage beverage){
@@ -62,7 +62,7 @@ class SugarAddon implements Beverage{
         return 5.00;
     }
 }
-class ChocolateAddon implements Beverage{
+class ChocolateAddon extends Addon{
     private ArrayList<Beverage> addons=new ArrayList<>();
 
     public void addon(Beverage beverage){

@@ -3,7 +3,7 @@
 
 <body>
 
-    <form action="welcome.php" method="get">
+    <form action="welcome.php" method="post">
         National ID: <input type="text" name="name"><br>
         Date of birth: <br>
         <input type="date" name="dob"><br>

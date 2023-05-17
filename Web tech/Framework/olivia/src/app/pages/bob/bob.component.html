@@ -1,0 +1,13 @@
+<div class="container" *ngFor="let cat of cats;let i=index;">
+    <p>{{cat.name}}</p>
+    <p>{{cat.fur}}</p>
+    <p>{{cat.cuteness}}</p>
+    <p>{{cat.amount}}</p>
+    <button (click)="addCat(i)">+</button>
+    <button (click)="removeCat(i)">-</button>
+    <div *ngIf="checkAmount(i)==false">
+        Edit:
+        <button (click)="editCat(i)">Edit</button>
+    </div>
+    <br>
+</div>

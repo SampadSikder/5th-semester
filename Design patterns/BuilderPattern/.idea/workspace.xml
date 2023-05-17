@@ -4,24 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="35dfa6d0-93d5-47c7-8aa3-740fe8df35fc" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Decorator/src/Beverage.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Decorator/src/Beverage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ECommerce/out/production/ECommerce/ConcreteMediator.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ECommerce/out/production/ECommerce/ConcreteMediator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ECommerce/out/production/ECommerce/ConcreteOnlineStore.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ECommerce/out/production/ECommerce/ConcreteOnlineStore.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ECommerce/out/production/ECommerce/Mediator.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ECommerce/out/production/ECommerce/Mediator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ECommerce/out/production/ECommerce/OnlineStore.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ECommerce/out/production/ECommerce/OnlineStore.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ECommerce/src/Mediator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ECommerce/src/Mediator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ECommerce/src/OnlineStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ECommerce/src/OnlineStore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Web tech/Framework/try/.angular/cache/15.2.2/angular-webpack/e7ac7240a4fb5411526467cf86371c7a71e9514f/0.pack" beforeDir="false" afterPath="$PROJECT_DIR$/../../Web tech/Framework/try/.angular/cache/15.2.2/angular-webpack/e7ac7240a4fb5411526467cf86371c7a71e9514f/0.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Web tech/Framework/try/.angular/cache/15.2.2/angular-webpack/e7ac7240a4fb5411526467cf86371c7a71e9514f/1.pack" beforeDir="false" afterPath="$PROJECT_DIR$/../../Web tech/Framework/try/.angular/cache/15.2.2/angular-webpack/e7ac7240a4fb5411526467cf86371c7a71e9514f/1.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Web tech/Framework/try/.angular/cache/15.2.2/angular-webpack/e7ac7240a4fb5411526467cf86371c7a71e9514f/2.pack" beforeDir="false" afterPath="$PROJECT_DIR$/../../Web tech/Framework/try/.angular/cache/15.2.2/angular-webpack/e7ac7240a4fb5411526467cf86371c7a71e9514f/2.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Web tech/Framework/try/.angular/cache/15.2.2/angular-webpack/e7ac7240a4fb5411526467cf86371c7a71e9514f/6.pack" beforeDir="false" afterPath="$PROJECT_DIR$/../../Web tech/Framework/try/.angular/cache/15.2.2/angular-webpack/e7ac7240a4fb5411526467cf86371c7a71e9514f/6.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Web tech/Framework/try/.angular/cache/15.2.2/angular-webpack/e7ac7240a4fb5411526467cf86371c7a71e9514f/7.pack" beforeDir="false" afterPath="$PROJECT_DIR$/../../Web tech/Framework/try/.angular/cache/15.2.2/angular-webpack/e7ac7240a4fb5411526467cf86371c7a71e9514f/7.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Web tech/Framework/try/.angular/cache/15.2.2/angular-webpack/e7ac7240a4fb5411526467cf86371c7a71e9514f/8.pack" beforeDir="false" afterPath="$PROJECT_DIR$/../../Web tech/Framework/try/.angular/cache/15.2.2/angular-webpack/e7ac7240a4fb5411526467cf86371c7a71e9514f/8.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Web tech/Framework/try/.angular/cache/15.2.2/angular-webpack/e7ac7240a4fb5411526467cf86371c7a71e9514f/index.pack" beforeDir="false" afterPath="$PROJECT_DIR$/../../Web tech/Framework/try/.angular/cache/15.2.2/angular-webpack/e7ac7240a4fb5411526467cf86371c7a71e9514f/index.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Web tech/Framework/try/.angular/cache/15.2.2/angular-webpack/e7ac7240a4fb5411526467cf86371c7a71e9514f/index.pack.old" beforeDir="false" afterPath="$PROJECT_DIR$/../../Web tech/Framework/try/.angular/cache/15.2.2/angular-webpack/e7ac7240a4fb5411526467cf86371c7a71e9514f/index.pack.old" afterDir="false" />
-    </list>
+    <list default="true" id="35dfa6d0-93d5-47c7-8aa3-740fe8df35fc" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,7 +30,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/home/iit/Desktop/5th-semester/Design patterns/BuilderPattern"
+    "last_opened_file_path": "/home/sampad/Desktop/5th-semester/Design patterns/Chain2"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

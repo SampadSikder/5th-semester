@@ -1,0 +1,19 @@
+<form>
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" name="item-name" [(ngModel)]="cat.name">
+    </div>
+    <div class="form-group">
+        <label for="prices">Cuteness</label>
+        <input type="text" class="form-control" id="prices" name="item-price" [(ngModel)]="cat.cuteness">
+    </div>
+    <div class="form-check">
+        <label class="form-check-label" for="quantity">Fur</label>
+        <input type="text" class="form-check-input" id="quantity" name="item-quantity" [(ngModel)]="cat.fur">
+    </div>
+    <div class="form-check">
+        <label class="form-check-label" for="amount">Amount</label>
+        <input type="number" class="form-check-input" id="amount" name="amount" [(ngModel)]="cat.amount">
+    </div>
+    <button class="btn btn-primary" (click)="updateCat()">Submit</button>
+</form>

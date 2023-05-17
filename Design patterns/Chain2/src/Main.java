@@ -1,3 +1,5 @@
+import java.util.logging.Handler;
+
 public class Main {
     public static void main(String[] args) {
         Handler handler1 = new ConcreteHandler1();
@@ -12,5 +14,6 @@ public class Main {
         handler1.handleRequest(request1);
         handler1.handleRequest(request2);
         handler1.handleRequest(request3);
+
     }
 }

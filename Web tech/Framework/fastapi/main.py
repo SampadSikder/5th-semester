@@ -46,10 +46,12 @@ async def get_cat(cat: Cat):
 
 
 @app.get("/items/{item_id}/{q}")
+
 async def read_item(item_id: int, q: str):
     return {
         "item_id": item_id, "q": q
     }
+
 class ModelName(str, Enum):
     alexnet = "alexnet"
     resnet = "resnet"

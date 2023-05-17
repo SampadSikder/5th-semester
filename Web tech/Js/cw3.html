@@ -30,7 +30,7 @@
         // for (let i = 0; i < myDiv.length; i++) {
         //     console.log(myDiv[i]);
         // }
-        // let myDiv = document.getElementById("container");
+        // let myDiv = document.getElementById("container1");
 
         // console.log(myDiv.parentElement);
         // console.log(myDiv.children);
@@ -46,15 +46,15 @@
         //     console.log(myDv[0].children[2].children[i]);
         // }
 
-        let para1 = document.getElementById("container1");
-        console.log(para1.firstElementChild);
-        console.log(para1.parentElement);
-        console.log(para1.childElementCount);
-        console.log(para1.lastElementChild);
+        // let para1 = document.getElementById("container1");
+        // // console.log(para1.firstElementChild);
+        // // console.log(para1.parentElement);
+        // // console.log(para1.childElementCount);
+        // // console.log(para1.lastElementChild);
 
-        for (let i = 0; i < para1.childElementCount; i++) {
-            console.log(para1.children[i]);
-        }
+        // for (let i = 0; i < para1.childElementCount; i++) {
+        //     console.log(para1.children[i]);
+        // }
 
         let myDiv = document.getElementsByClassName("container");
         console.log(myDiv);
@@ -63,9 +63,9 @@
         myDiv[0].firstElementChild.style.color = "blue";
         myDiv[0].firstElementChild.innerHTML = "Hello";
         console.log(myDiv[0].firstElementChild.innerHTML);
-        myDiv[0].append(para1.innerText);
+        //myDiv[0].append(para1.innerText);
 
-        console.log(para1.children[2].children[2]);
+        //console.log(para1.children[2].children[2]);
 
         const add = document.createElement("p");
         add.setAttribute("onclick", "fun()");

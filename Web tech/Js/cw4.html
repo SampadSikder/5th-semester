@@ -37,7 +37,7 @@
         let para1 = document.createElement("p");
         para1.innerText = "This is para 1";
 
-        myDiv.insertBefore(para1, myDiv.firstElementChild);
+        myDiv.insertBefore(para1, myDiv.children[1]);
 
         let para2 = document.getElementById("p3");
         let className = para2.getAttribute("class");

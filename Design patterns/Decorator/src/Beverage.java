@@ -2,74 +2,64 @@ import javax.accessibility.AccessibleValue;
 import java.util.ArrayList;
 
 public interface Beverage {
-    public void addon(Beverage beverage);
+
     public double getCost();
 }
 
 class Espresso implements Beverage{
-    public void addon(Beverage beverage){
 
-    }
     public double getCost(){
         return 10.0;
     }
 }
 class Mocha implements Beverage{
-    public void addon(Beverage beverage){
 
-    }
     public double getCost(){
         return 10.0;
     }
 }
 
 class Addon implements Beverage{
-    private ArrayList<Beverage> addons=new ArrayList<>();
 
-    public void addon(Beverage beverage){
-        this.addons.add(beverage);
+    private Beverage beverage;
+    public Addon(){
+
     }
-
+    public Addon(Beverage beverage){
+        this.beverage=beverage;
+    }
     public double getCost(){
         double price=0;
+        price+= beverage.getCost();
 
-        for(Beverage beverage:addons){
-            price+= beverage.getCost();
-        }
         return price;
     }
 }
 
 class MilkAddon extends Addon{
-    private ArrayList<Beverage> addons=new ArrayList<>();
 
-    public void addon(Beverage beverage){
-        this.addons.add(beverage);
+    private Beverage beverage;
+    public MilkAddon(Beverage beverage){
+        this.beverage=beverage;
     }
-
     public double getCost(){
-        return 5.00;
+        double price=5.0;
+        price+= beverage.getCost();
+        System.out.println("Extra milk");
+        return price;
     }
 }
 class SugarAddon extends Addon{
-    private ArrayList<Beverage> addons=new ArrayList<>();
 
-    public void addon(Beverage beverage){
-        this.addons.add(beverage);
+    private Beverage beverage;
+    public SugarAddon(Beverage beverage){
+        this.beverage=beverage;
     }
-
     public double getCost(){
-        return 5.00;
+        double price=5.0;
+        price+= beverage.getCost();
+        System.out.println("Extra sugar");
+        return price;
     }
 }
-class ChocolateAddon extends Addon{
-    private ArrayList<Beverage> addons=new ArrayList<>();
 
-    public void addon(Beverage beverage){
-        this.addons.add(beverage);
-    }
-
-    public double getCost(){
-        return 5.00;
-    }
-}

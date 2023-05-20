@@ -30,7 +30,6 @@ class Addon implements Beverage{
     }
     public double getCost(){
         double price=0;
-        price+= beverage.getCost();
 
         return price;
     }

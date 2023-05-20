@@ -39,3 +39,4 @@ class Colleague2 extends Colleague{
         System.out.println("Colleague2 received message: " + message);
     }
 }
+

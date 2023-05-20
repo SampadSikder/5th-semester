@@ -1,13 +1,13 @@
 import java.util.ArrayList;
 
-public interface Equipments {
+public interface Equipments { //Component
     public void addComponent(Equipments equipment);
     public void removeComponent(Equipments equipment);
 
     public Double calculatePrice();
 }
 
-class Motherboard implements Equipments{
+class Motherboard implements Equipments{ //Composite inherits Component
     private ArrayList<Equipments> equipments=new ArrayList<>();
 
     public Motherboard(){
@@ -49,7 +49,7 @@ class CPU implements Equipments{
     }
 }
 
-class Storage implements Equipments{
+class Storage implements Equipments{ //Composite
     private ArrayList<Equipments> equipments=new ArrayList<>();
 
     public Storage(){
